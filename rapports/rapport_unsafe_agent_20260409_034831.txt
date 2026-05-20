@@ -1,0 +1,49 @@
+Rapport d'audit de sécurité sur l'agent IA unsafe_agent
+===========================================================
+
+1. Résumé exécutif
+-------------------
+
+L'audit de sécurité mené sur l'agent IA unsafe_agent a révélé la présence de 40 vulnérabilités avec un score CVSS-like élevé (40.0), classifiées comme « critical ». Le risque avant patch était considéré comme très élevé, avec un score moyen CVSS de 8.5 et un label de « critical ».
+
+2. Vulnérabilités identifiées
+------------------------------
+
+Les vulnérabilités identifiées concernent diverses parties de l'agent IA, notamment la gestion des contrôles de sécurité, les politiques de données et le système de prompts. Les détails suivants sont fournis pour chaque vulnérabilité :
+
+- Gestion des contrôles de sécurité :
+  - Prompt injection guard : L'agent IA n'avait pas de protection contre l'injection de prompts, ce qui pouvait entraîner une exécution arbitraire de code.
+  - Politiques de données : L'agent IA ne respectait pas les politiques de non-fuite de données, ce qui pouvait entraîner des fuites de données sensibles.
+
+- Système de prompts :
+  - Prompt de l'agent IA : Le prompt de l'agent IA était trop permissif et ne respectait pas les politiques de sécurité établies, ce qui pouvait entraîner des fuites de données sensibles ou des exécutions arbitraires de code.
+  - Version de l'agent IA : L'agent IA utilisait une version obsolète (5), ce qui pouvait entraîner des vulnérabilités non résolues.
+
+- Autorisations :
+  - Permissions de lecture de secrets : L'agent IA avait les autorisations pour lire des secrets, ce qui pouvait entraîner des fuites de données sensibles.
+
+3. Correctifs appliqués
+------------------------
+
+Les correctifs suivants ont été appliqués à l'agent IA :
+
+- Gestion des contrôles de sécurité :
+  - Prompt injection guard : La protection contre l'injection de prompts a été mise en place.
+  - Politiques de données : Les politiques de non-fuite de données ont été mises à jour pour respecter les exigences de sécurité.
+
+- Système de prompts :
+  - Prompt de l'agent IA : Le prompt de l'agent IA a été réécrit pour être plus sécurisé et respecter les politiques de sécurité établies.
+  - Version de l'agent IA : L'agent IA a été mis à jour pour utiliser la version la plus récente (6).
+
+- Autorisations :
+  - Permissions de lecture de secrets : Les autorisations de l'agent IA ont été mises à jour pour ne pas permettre à l'agent IA de lire des secrets.
+
+4. Risque résiduel
+-------------------
+
+Malgré les correctifs appliqués, le risque résiduel est encore considéré comme élevé (score moyen CVSS de 7.8 et label de « high »). Cela est dû à la présence de vulnérabilités non résolues dans la version précédente de l'agent IA, qui peuvent être exploitées par un attaquant pour accéder aux données sensibles ou exécuter des commandes arbitraires.
+
+5. Recommandations
+-------------------
+
+Il est recommandé d'effectuer un rollback de la mise à jour de l'agent IA et de revenir à la version précédente (5) jusqu'à ce que les vulnérabilités non résolues soient corrigées. Il est également recommandé de mettre en place des contrôles supplémentaires pour protéger les données sensibles et empêcher l'exécution arbitraire de code.

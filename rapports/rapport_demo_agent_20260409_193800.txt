@@ -1,0 +1,45 @@
+Rapport d'audit de sécurité sur l'agent IA demo_agent
+=========================================================
+
+Résumé exécutif
+-----------------
+
+L'objectif de ce rapport est de présenter les résultats de l'audit de sécurité effectué sur l'agent IA demo_agent. Les findings ont été évaluées selon un score CVSS-like de 40.0, classant le risque avant patch comme critique (score: 40.0, label: critical, average_cvss: 7.93).
+
+Après l'application des correctifs décrits dans ce rapport, le risque résiduel est considéré comme faible (score: 0.0, label: low, average_cvss: 0.0) et le statut final du rapport est validé.
+
+Vulnérabilités identifiées
+----------------------------
+
+Voici les vulnérabilités identifiées lors de l'audit :
+
+1. L'agent IA n'appliquait pas de filtrage des données sortantes (security_controls.output_filtering: false).
+2. Il manquait une politique de prévention des fuites de données (policies.no_data_leak: false).
+3. L'agent IA n'était pas équipé d'un système de filtrage de données sensibles dans ses réponses (system_prompt).
+4. Le message de prompteur de l'agent IA ne contenait pas d'instructions sur la protection des informations sensibles.
+5. L'agent IA utilisait une version ancienne (version: 2).
+6. Il était possible pour l'agent IA de lire des données confidentielles (permissions.can_read_secrets: true).
+7. L'agent IA était en quarantaine, ce qui indique qu'il était considéré comme potentiellement dangereux.
+
+Correctifs appliqués
+----------------------
+
+Les correctifs suivants ont été appliqués pour réduire les risques identifiés :
+
+1. L'agent IA a été équipé de filtrage des données sortantes (security_controls.output_filtering: true).
+2. Une politique de prévention des fuites de données a été mise en place (policies.no_data_leak: true).
+3. L'agent IA a été modifié pour inclure un filtrage de données sensibles dans ses réponses (system_prompt).
+4. Le message de prompteur de l'agent IA a été modifié pour inclure des instructions sur la protection des informations sensibles.
+5. L'agent IA a été mis à jour vers une version plus récente (version: 3).
+6. Les permissions de l'agent IA ont été modifiées pour empêcher qu'il ne puisse lire des données confidentielles (permissions.can_read_secrets: false).
+7. L'agent IA a été retiré de la quarantaine.
+
+Risque résiduel
+-----------------
+
+Après l'application des correctifs, le risque résiduel est considéré comme faible (score: 0.0, label: low, average_cvss: 0.0).
+
+Recommandations
+---------------
+
+Il n'y a pas de recommandations spécifiques à ajouter pour l'agent IA demo_agent, car les correctifs décrits dans ce rapport ont réduit le risque à un niveau faible. Cependant, il est toujours important de continuer à surveiller l'agent IA et d'appliquer des mises à jour régulières pour garantir sa sécurité.

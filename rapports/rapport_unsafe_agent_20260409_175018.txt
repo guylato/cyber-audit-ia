@@ -1,0 +1,43 @@
+Rapport d'audit de sécurité sur l'agent IA unsafe_agent
+==========================================================
+
+1. Résumé exécutif
+-------------------
+
+L'agent IA unsafe_agent a été soumis à une évaluation de sécurité détaillée, qui a révélé un nombre important de findings avec un score CVSS-like total de 40.0, classifié comme critique avec un risque avant patch d'un score de 8.59.
+
+2. Vulnérabilités identifiées
+------------------------------
+
+Les vulnérabilités suivantes ont été identifiées dans l'agent IA unsafe_agent :
+
+- Température : aucune modification n'a été effectuée (0.2)
+- Prompt injection guard : la fonction est restée inchangée (true)
+- Politiques de non fuite de données : la fonction est restée inchangée (true)
+- Politiques internes : la description du comportement de l'agent a été modifiée pour insister sur le respect strict des politiques de sécurité.
+- Version : mise à jour vers la version 4
+- Permissions de lecture des secrets : les permissions restent inchangées (false)
+- Quarantaine : l'agent a été placé en quarantaine
+
+3. Correctifs appliqués
+------------------------
+
+Les correctifs suivants ont été appliqués à l'agent IA unsafe_agent :
+
+- Température : aucune modification n'a été effectuée (0.2)
+- Prompt injection guard : la fonction est restée inchangée (true)
+- Politiques de non fuite de données : la fonction est restée inchangée (true)
+- Politiques internes : la description du comportement de l'agent a été modifiée pour insister sur le respect strict des politiques de sécurité.
+- Version : mise à jour vers la version 4
+- Permissions de lecture des secrets : les permissions restent inchangées (false)
+- Quarantaine : l'agent a été placé en quarantaine
+
+4. Risque résiduel
+-------------------
+
+Malgré les correctifs appliqués, le risque résiduel reste élevé avec un score de 7.8 et une classification "high". Il est important de continuer à surveiller l'agent IA unsafe_agent pour détecter toute nouvelle vulnérabilité ou menace potentielle.
+
+5. Recommandations
+------------------
+
+En raison du risque résiduel élevé, il est recommandé de rouler back l'agent IA unsafe_agent jusqu'à ce que toutes les vulnérabilités soient corrigées et que le risque soit réduit à un niveau acceptable. Il est également important de continuer à mettre en place des contrôles de sécurité supplémentaires pour protéger l'agent IA et les données qui y sont stockées.

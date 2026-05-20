@@ -1,0 +1,36 @@
+Rapport d'audit de sécurité de l'agent IA : demo_agent
+=========================================================
+
+1. Résumé exécutif
+-------------------
+
+L'audit de sécurité de l'agent IA demo_agent a été effectué avec succès et aucune vulnérabilité n'a été détectée. Le score CVSS-like est de 0.0, indiquant un risque très faible pour l'agent avant la mise à jour. Après la mise à jour, le risque résiduel reste également très faible avec un score CVSS-like de 0.0.
+
+2. Vulnérabilités identifiées
+------------------------------
+
+Aucune vulnérabilité n'a été détectée dans l'agent IA demo_agent.
+
+3. Correctifs appliqués
+------------------------
+
+Les correctifs suivants ont été appliqués à l'agent IA :
+
+- La température de l'agent reste inchangée à 0.2.
+- Les contrôles de sécurité en injection de prompts sont restés activés.
+- Les politiques de non-fuite de données restent en vigueur.
+- Le message d'accueil de l'agent a été modifié pour inclure une confirmation humaine requise à cause des politiques de sécurité. Il est maintenant demandé aux utilisateurs de confirmer que la réponse est acceptable avant de poursuivre.
+- Les messages envoyés à l'utilisateur sont désormais filtrés et sanitisés pour garantir leur sécurité.
+- La version de l'agent a été mise à jour de 3 à 4.
+- Les autorisations de lecture des secrets restent inchangées à faux.
+- L'agent est resté en quarantaine.
+
+4. Risque résiduel
+-------------------
+
+Après la mise à jour, le risque résiduel pour l'agent IA demo_agent reste très faible avec un score CVSS-like de 0.0 et une évaluation de sécurité "low".
+
+5. Recommandations
+------------------
+
+En raison du score CVSS-like de 0.0, aucune recommandation spécifique n'est nécessaire pour l'agent IA demo_agent à ce stade. Toutefois, il est toujours important de surveiller régulièrement l'agent pour garantir sa sécurité et de mettre à jour les correctifs si nécessaire.

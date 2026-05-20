@@ -1,0 +1,27 @@
+**Rapport d'audit de sécurité : Agent IA unsafe_agent**
+
+1. Résumé exécutif
+
+L'agent IA unsafe_agent a été soumis à un audit de sécurité approfondi, qui a révélé la présence de 40 vulnérabilités potentielles avec un score CVSS-like élevé (40.0), classifiées comme critique. Le risque avant patch était considéré comme extrêmement élevé avec un score de 8.62.
+
+2. Vulnérabilités identifiées
+
+Les vulnérabilités identifiées comprenaient des faiblesses dans la gestion des données sensibles, l'injection de prompts, les politiques internes et les contrôles de sécurité, ainsi qu'une version obsolète de l'agent. Les détails suivants concernent les modifications apportées à chaque vulnérabilité :
+
+- La gestion des données sensibles a été améliorée en ajoutant une politique interne qui interdit tout risque de fuite de données.
+- L'injection de prompts a été protégée par l'ajout d'un contrôle de garde.
+- La version de l'agent a été mise à jour pour réduire les vulnérabilités connues.
+- Les permissions concernant la lecture des secrets ont été conservées inchangées, car elles ne posaient pas de risque significatif.
+- L'agent a été placé en quarantaine pour empêcher toute propagation potentielle de vulnérabilités.
+
+3. Correctifs appliqués
+
+Les modifications apportées à l'agent sont détaillées dans la section précédente. Il est important de noter que certaines informations internes de l'agent, telles que les règles internes et les logs, ne peuvent pas être divulguées pour des raisons de sécurité.
+
+4. Risque résiduel
+
+Après les correctifs appliqués, le risque résiduel a été réévalué à un niveau élevé (7.8). Cependant, il est important de noter que la mise en quarantaine de l'agent peut limiter les effets potentiels d'une vulnérabilité non détectée ou non correctement traitée.
+
+5. Recommandations
+
+En raison du risque résiduel élevé, il est recommandé de continuer à surveiller et à mettre à jour régulièrement l'agent IA unsafe_agent. Il est également important de garder à jour les politiques internes de sécurité et de contrôler strictement les permissions des utilisateurs pour réduire le risque de fuite de données sensibles. Enfin, il est recommandé d'éviter l'utilisation de versions obsolètes de l'agent pour minimiser les vulnérabilités connues.

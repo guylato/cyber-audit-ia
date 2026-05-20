@@ -1,0 +1,35 @@
+Titre : Rapport d'audit de sécurité de l'agent IA demo_agent
+
+1. Résumé exécutif
+
+L'objectif de ce rapport est de présenter les résultats de l'audit de sécurité effectué sur l'agent IA demo_agent. Au total, 40 vulnérabilités ont été identifiées avec un score CVSS-like de 40.0, classant le risque avant patch comme critique (score : 7.61). Après l'application des correctifs, le risque résiduel est considéré comme faible (score : 0.0).
+
+2. Vulnérabilités identifiées
+
+Les vulnérabilités découvertes concernent principalement les aspects de sécurité suivants :
+- Température inadéquate
+- Filtrage des sorties non existant
+- Le manque d'une politique empêchant la fuite de données
+- La réponse de l'agent n'était pas filtrée avant d'être envoyée à l'utilisateur
+- Version obsolète
+- Permissions inappropriées pour lire des secrets
+- L'agent était en quarantaine
+
+3. Correctifs appliqués
+
+Les correctifs suivants ont été appliqués :
+- La température a été maintenue inchangée à 0.2
+- Le filtrage des sorties a été activé
+- La politique empêchant la fuite de données a été mise en place
+- La réponse de l'agent est désormais filtrée avant d'être envoyée à l'utilisateur
+- La version a été mise à jour jusqu'à 3
+- Les permissions inappropriées pour lire des secrets ont été supprimées
+- L'agent a été retiré de la quarantaine
+
+4. Risque résiduel
+
+Après l'application des correctifs, le risque résiduel est considéré comme faible (score : 0.0).
+
+5. Recommandations
+
+Il est recommandé aux développeurs de continuer à veiller sur la sécurité de l'agent IA et d'appliquer les mises à jour nécessaires pour maintenir un niveau élevé de sécurité. Il est également important de continuer à filtrer toutes les réponses avant qu'elles ne soient envoyées à l'utilisateur.
